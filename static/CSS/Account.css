@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  min-height: 100vh;
+  background: #F0F4FF;
+  display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 85px; /* Collapsed width */
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  background: #161a2d;
+  padding: 25px 20px;
+  transition: all 0.4s ease;
+}
+
+.sidebar:hover {
+  width: 260px; /* Expanded width */
+}
+
+.sidebar .sidebar-header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .sidebar-header img {
+  width: 42px;
+  border-radius: 50%;
+}
+
+.sidebar .sidebar-header h2 {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 23px;
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.3s; /* Fade-in transition */
+}
+
+.sidebar:hover .sidebar-header h2 {
+  opacity: 1; /* Show on hover */
+}
+
+.sidebar-links h4 {
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  margin: 10px 0;
+  position: relative;
+}
+
+.sidebar-links h4 span {
+  opacity: 0;
+}
+
+.sidebar:hover .sidebar-links h4 span {
+  opacity: 1;
+}
+
+.sidebar-links .menu-separator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(1);
+  transform: translateY(-50%);
+  background: #4f52ba;
+  transform-origin: right;
+  transition-delay: 0.2s;
+}
+
+.sidebar:hover .sidebar-links .menu-separator {
+  transition-delay: 0s;
+  transform: scaleX(0);
+}
+
+.sidebar-links {
+  list-style: none;
+  margin-top: 20px;
+  height: 80%;
+  overflow-y: auto;
+  scrollbar-width: none; /* Hide scrollbar */
+}
+
+.sidebar-links::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.sidebar-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 15px 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.sidebar-links li a .text {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; /* Transition for opacity */
+}
+
+.sidebar:hover .sidebar-links li a .text {
+  opacity: 1; /* Show text on hover */
+}
+
+.sidebar-links li a:hover {
+  color: #161a2d;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.sidebar-links li a.active {
+  background: #4f52ba; /* Active link background */
+  color: #fff; /* Active link text color */
+  border-radius: 4px;
+}
+
+/* Content Styles */
+.content {
+  margin-left: 100px; /* Adjust for the sidebar */
+  padding: 20px;
+  flex-grow: 1;
+  transition: margin-left 0.4s; /* Smooth margin adjustment */
+}
+
+.sidebar:hover + .content {
+  margin-left: 260px; /* Adjust content margin when sidebar is expanded */
+}
+
+/* Page Header */
+h2 {
+  text-align: center; /* Center the header text */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Form Styling */
+.MyAccount-content {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70%;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.MyAccount-content {
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.MyAccount-content p {
+  margin-bottom: 15px;
+}
+
+.MyAccount-content > p:first-child {
+  font-size: 2.7rem;
+}
+
+.MyAccount-content > p:nth-child(2) {
+  font-size: 1.2rem;
+  color: gray;
+  margin-bottom: 50px;
+}
+
+/* Form Elements */
+form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+.form-row .input-text {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-row .required {
+  color: red;
+}
+
+/* Password Fieldset */
+fieldset {
+  border: none;
+  background: #f9f9f9;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Submit Button */
+.Button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.Button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Form Labels */
+label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Helper Text */
+span em {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Email Verification Section */
+.email-verification {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.email-status {
+  font-weight: bold;
+  color: green;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .Button[type="submit"] {
+    width: 100%;
+  }
+}

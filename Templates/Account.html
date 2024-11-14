@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account</title>
+  <link rel="stylesheet" href="../static/CSS/Account.css">
+  <!-- Add Font Awesome CDN link for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script defer src="../static/Javascript/Account.js"></script>
+</head>
+<body>
+  
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="../static/Images/Exafluence.jpg" alt="logo" />
+      <span style="color: white; padding-left: 25px; font-weight: bold;">Exafluence</span>
+    </div>
+    <ul class="sidebar-links">
+      <h4>
+        <span>Main Menu</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-tachometer-alt"></i></span> 
+          <span class="text"> Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-user"></i></span> 
+          <span class="text"> My Account</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-box"></i></span> 
+          <span class="text"> My Shipment</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-plus"></i></span> 
+          <span class="text"> New Shipment</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-cog"></i></span> 
+          <span class="text"> Device Data</span>
+        </a>
+      </li>
+      <li>
+        <a href="login" class="logout">
+          <span class="icon"><i class="fas fa-sign-out-alt"></i></span> 
+          <span class="text"> Logout</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <div class="content">
+    <div class="MyAccount-content">
+      <p>Hello <strong>user</strong></p>
+      
+      <form class="EditAccountForm" action="" method="post">
+        <div class="form-row">
+          <label for="account_display_name">User Name</label>
+          <input type="text" class="input-text" name="account_display_name" id="account_display_name" value="luubinhan1989">
+        </div>
+
+        <div class="form-row">
+          <label for="account_email">Email Address</label>
+          <input type="email" class="input-text" name="account_email" id="account_email" value="luubinhan1989@gmail.com">
+        </div>
+
+        <!-- Email Verification -->
+        <div class="email-verification">
+          <span class="email-status" id="email-status">Email is not verified</span>
+          <button type="button" class="Button" onclick="sendVerification()">Send Verification Email</button>
+        </div>
+
+        <fieldset>
+          <legend>Password Change</legend>
+
+          <div class="form-row">
+            <label for="password_current">Current Password </label>
+            <input type="password" class="input-text" name="password_current" id="password_current">
+          </div>
+
+          <div class="form-row">
+            <label for="password_1">New Password </label>
+            <input type="password" class="input-text" name="password_1" id="password_1">
+          </div>
+
+          <div class="form-row">
+            <label for="password_2">Confirm New Password</label>
+            <input type="password" class="input-text" name="password_2" id="password_2">
+          </div>
+        </fieldset>
+
+        <button type="submit" class="Button" name="save_account_details">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

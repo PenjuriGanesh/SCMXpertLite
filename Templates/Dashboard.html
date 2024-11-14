@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/CSS/Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Canvas element -->
+    <canvas id="canvas"></canvas>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../static/Images/Exafluence.jpg" alt="logo" />
+            <span style="color: white; padding-left: 25px; font-weight: bold;">Exafluence</span>
+        </div>
+        <ul class="sidebar-links">
+            <h4>
+                <span>Main Menu</span>
+                <div class="menu-separator"></div>
+            </h4>
+            <li>
+                <a href="#" class="active">
+                    <span class="icon"><i class="fas fa-tachometer-alt"></i></span> 
+                    <span class="text"> Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-user"></i></span> 
+                    <span class="text"> My Account</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-box"></i></span> 
+                    <span class="text"> My Shipment</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-plus"></i></span> 
+                    <span class="text"> New Shipment</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-cog"></i></span> 
+                    <span class="text"> Device Data</span>
+                </a>
+            </li>
+            <li>
+                <a href="login" class="logout">
+                    <span class="icon"><i class="fas fa-sign-out-alt"></i></span> 
+                    <span class="text"> Logout</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="content1">
+        <h2 style="background-color: #242841; width: 100%; padding: 10px ; text-align: center;">Welcome to SCMXpertLite</h2>
+    </div>
+
+    <div class="content">
+        <div class="button-container">
+            <button class="action-button" id="device-data-stream-btn">Device Data Stream</button>
+            <button class="action-button" id="shipment-data-btn">Shipment Data</button>
+        </div>
+    </div>
+
+    <script src="../static/Javascript/Dashboard.js"></script>
+</body>
+</html>

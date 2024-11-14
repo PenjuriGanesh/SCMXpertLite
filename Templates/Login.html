@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form with Captcha</title>
+  <link rel="stylesheet" href="../static/CSS/login.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form Section -->
+    <div class="login-form">
+      <div class="form-title">
+        Login
+      </div>
+      <div class="form-input">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter email">
+      </div>
+      <div class="form-input">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter Password">
+      </div>
+      <div class="captcha">
+        <label for="captcha-input">Enter Captcha</label>
+        <div class="preview"></div>
+        <div class="captcha-form">
+          <input type="text" id="captcha-form" placeholder="Enter Captcha">
+          <button class="captcha-refresh">
+            <i class="fa fa-refresh"></i> Refresh
+          </button>
+        </div>
+      </div>
+      <div class="form-input">
+        <button id="login-btn">Login</button>
+      </div>
+      <div class="form-links">
+        <span>Don't have an account? <a href="signup" class="signup-link">Sign up</a></span><br>
+        <span>Forgot your password? <a href="forgetpassword" class="forgot-password-link">Forgot password</a></span>
+      </div>
+    </div>
+
+    <!-- Iuage Section -->
+    <div class="image-section">
+      <img src="../static/Images/truck-8656658_1280.jpg" alt="Truck Image">
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="../static/Javascript/login.js"></script>
+</body>
+</html>
