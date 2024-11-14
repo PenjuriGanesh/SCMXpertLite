@@ -30,7 +30,7 @@ def login(request: Request, username: str = Form(...), password: str = Form(...)
                     "role": user_data["role"]
                 }
                 # Redirect the user to the dashboard page
-                return RedirectResponse(url="/dashboard.py", status_code=303)
+                return RedirectResponse(url="/dashboard", status_code=303)
 
             else:
                 raise HTTPException(status_code=401, detail="Password is incorrect")
